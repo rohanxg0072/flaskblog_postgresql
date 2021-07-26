@@ -5,7 +5,7 @@ with open("config.json") as config_file:
 
 class Config:
     SECRET_KEY = config.get("SECRET_KEY")
-    DATABASE_URL = config.get("DATABASE_URL")
+    SQLALCHEMY_DATABASE_URI = config.get("SQLALCHEMY_DATABASE_URI")
     MAIL_SERVER = config.get("MAIL_SERVER")
     MAIL_PORT = config.get("MAIL_PORT")
     MAIL_USE_TLS = config.get("MAIL_USE_TLS")
