@@ -2,7 +2,7 @@
     "MAIL_USER":"eggreset0@gmail.com",
     "MAIL_PASS":"$egg1234",
     "SECRET_KEY":"94b8cf8ee008c07b71ef4546273d823c",
-    "SQLALCHEMY_DATABASE_URI":"sqlite:///site.db",
+    "DATABASE_URL":"postgres://cyurgrrhdwcvlc:61112f905e6bb480bb525c2201e77f75938d1868136c4ea97acda46684e25961@ec2-52-45-183-77.compute-1.amazonaws.com:5432/daeihur6trnbsk",
     "MAIL_SERVER":"smtp.googlemail.com",
     "MAIL_PORT":"587",
     "MAIL_USE_TLS":"True"
