@@ -3,6 +3,8 @@ from datetime import datetime
 from flask_login import UserMixin
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from flask import current_app
+import click
+from flask.cli import with_appcontext
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -47,3 +49,8 @@ class Post(db.Model):
 
   def __repr__(self):
     return f"Post('{self.title}', '{self.date_posted}')"
+
+@click.command(name="create_tables")
+@with_appcontext
+def create_tables():
+    db.create_all()
