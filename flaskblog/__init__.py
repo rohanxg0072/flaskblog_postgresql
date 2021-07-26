@@ -11,8 +11,7 @@ from flask_login import LoginManager, login_manager
 from flask_bootstrap import Bootstrap
 from flask_mail import Mail
 from flaskblog.config import Config
-import click
-from flask.cli import with_appcontext
+
 
 mail = Mail()
 db = SQLAlchemy()
@@ -22,11 +21,6 @@ login_manager.login_view = 'users.login' #function for login route
 login_manager.login_message_category = 'info'
 bootstrap = Bootstrap()
 
-from flaskblog.models import User, Post
-@click.command(name="create_tables")
-@with_appcontext
-def create_tables():
-    db.create_all()
 
 def create_app(config_class=Config):
     app = Flask(__name__)
